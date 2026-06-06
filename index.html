@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#bfe6ff" />
+    <title>Tiny Lives</title>
+  </head>
+  <body>
+    <div id="game"></div>
+
+    <div id="hud" class="hidden">
+      <div id="needs-mount"></div>
+      <div id="topbar">
+        <button id="room-chip" title="Copy room link">
+          <span class="room-dot"></span>
+          <span id="room-label">ROOM</span>
+        </button>
+        <div id="players-chip"><span id="players-count">1</span> 🙂</div>
+        <button id="mute-btn" class="icon-btn" title="Sound">🔊</button>
+      </div>
+      <div id="toast"></div>
+    </div>
+
+    <div id="controls" class="hidden">
+      <button id="prompt" class="hidden"></button>
+      <div id="right-stack">
+        <button id="chat-btn" class="round-btn" title="Chat">💬</button>
+        <button id="emote-btn" class="round-btn" title="Emotes">😄</button>
+      </div>
+      <div id="emote-wheel" class="hidden">
+        <button class="emote-opt" data-emote="wave">👋</button>
+        <button class="emote-opt" data-emote="dance">💃</button>
+        <button class="emote-opt" data-emote="laugh">😂</button>
+        <button class="emote-opt" data-emote="heart">❤️</button>
+      </div>
+      <form id="chat-form" class="hidden">
+        <input id="chat-input" type="text" maxlength="80" placeholder="Say something…" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div id="start">
+      <div class="start-card">
+        <h1>Tiny&nbsp;Lives</h1>
+        <p class="tagline">a cozy little world to share with friends</p>
+        <div id="preview"></div>
+        <label class="field">
+          <span>Your name</span>
+          <input id="name-input" type="text" maxlength="14" placeholder="Tiny You" autocomplete="off" />
+        </label>
+        <div class="field">
+          <span>Body colour</span>
+          <div id="swatches"></div>
+        </div>
+        <div class="field">
+          <span>Hat</span>
+          <div id="hats"></div>
+        </div>
+        <button id="join-btn">Enter the world ✨</button>
+        <p id="room-line" class="room-line"></p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
